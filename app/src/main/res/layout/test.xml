@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="883dp"
+    android:layout_height="88dp"
+    android:background="@drawable/background"
+    android:showDividers="middle"
+    android:dividerPadding="30dp"
+    android:divider="@drawable/between_line"
+    android:orientation="horizontal">
+<!--
+如何在LinearLayout中添加分割线
+    android:divider="@drawable"
+
+drawable可以是图片文件，也可以是xml绘制的shape。
+
+使用shape的时候一定要添加<size> ，一定要添加颜色，即使是透明，例如：
+
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@color/account_line" />
+    <size android:height="1px" />
+</shape>
+
+android:showDividers = "middle|end|beginning|none"
+
+middle 在每一项中间添加分割线
+
+end 在整体的最后一项添加分割线
+
+beginning 在整体的最上方添加分割线
+
+必须两个一起使用
+dividerPadding：是左右或上下距离LinearLayout的边距，有点margin的意思。
+你可以随时在自己的demo程序里改变下这个值，然后就能立马在预览区看到效果，帮助你加深理解。
+-->
+    <LinearLayout
+        android:layout_width="766dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:gravity="center"
+
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="66dp"
+            android:layout_height="66dp"
+            android:scaleType="fitXY"
+            android:src="@mipmap/simple_02" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="执行攻坚"
+            android:textColor="#333333"
+            android:textSize="36sp" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="766dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="66dp"
+            android:layout_height="66dp"
+            android:scaleType="fitXY"
+            android:src="@mipmap/simple_02" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="执行攻坚"
+            android:textColor="#333333"
+            android:textSize="36sp" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="766dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="66dp"
+            android:layout_height="66dp"
+            android:scaleType="fitXY"
+            android:src="@mipmap/simple_02" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="执行攻坚"
+            android:textColor="#333333"
+            android:textSize="36sp" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="766dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="66dp"
+            android:layout_height="66dp"
+            android:scaleType="fitXY"
+            android:src="@mipmap/simple_02" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="执行攻坚"
+            android:textColor="#333333"
+            android:textSize="36sp" />
+    </LinearLayout>
+</LinearLayout>

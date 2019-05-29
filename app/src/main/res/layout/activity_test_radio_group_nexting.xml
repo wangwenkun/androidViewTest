@@ -5,46 +5,71 @@
     android:orientation="vertical">
 
     <RadioGroup
+        android:id="@+id/rg_test2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
         android:orientation="horizontal">
 
         <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            style="@style/filter_radioButton_style"
             android:text="本省案例" />
 
         <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            style="@style/filter_radioButton_style"
             android:text="全国案例" />
 
         <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            style="@style/filter_radioButton_style"
             android:text="最高法发布案例" />
     </RadioGroup>
 
-    <RadioGroup
+    <Button
+        android:id="@+id/btn_test_click"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:text="btn_test_click" />
+
+    <com.www.myapplication.radiogroup.view.RecursiveRadioGroup
+        android:id="@+id/rb_test"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
         <com.google.android.flexbox.FlexboxLayout xmlns:app="http://schemas.android.com/apk/res-auto"
-            android:layout_width="match_parent"
+            android:id="@+id/fl_id"
+            android:layout_width="500dp"
             android:layout_height="match_parent"
-            app:flexWrap="wrap_reverse">
+            app:flexWrap="wrap">
             <!--
             flexWrap 决定此控件是否换行
                 nowrap ：不换行
-                warp   ：换行
+                wrap   ：换行
                 wrap_reverse  ： 按反方向换行
+            justifyContent 决定此控件的子控件在y轴对齐方式
+                flex_start（默认值）：左对齐
+                flex_end：右对齐
+                center： 居中
+                space_between：两端对齐，项目之间的间隔都相等。
+                space_around：每个项目两侧的间隔相等。项目之间的间隔比项目与边框的间隔大一倍。
+            alignItems  决定此控件的子控件在x轴对齐方式
+                flex-start：交叉轴的起点对齐。
+                flex-end：交叉轴的终点对齐。
+                center：交叉轴的中点对齐。
+                baseline: 项目的第一行文字的基线对齐。
+                stretch（默认值）：如果项目未设置高度或设为auto，将占满整个容器的高度。
             -->
 
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="抢夺罪" />
+                android:text="抢夺罪"
+                app:layout_order="1" />
+            <!--
+            app:layout_order 默认情况下子元素的排列方式按照文档流的顺序依次排序
+                而order属性可以控制排列的顺序，负值在前，正值在后，按照从小到大的顺序依次排列。
+                简而言之就是你可以定义子元素的排列顺序。
+            -->
 
             <RadioButton
                 android:layout_width="wrap_content"
@@ -77,6 +102,7 @@
                 android:text="合同诈骗罪" />
 
             <RadioButton
+                android:id="@+id/rb_ffcydpz"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="非法持有毒品罪" />
@@ -177,5 +203,69 @@
                 android:text="行贿罪" />
 
         </com.google.android.flexbox.FlexboxLayout>
-    </RadioGroup>
+
+        <com.google.android.flexbox.FlexboxLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="500dp"
+            android:layout_height="match_parent"
+            app:flexWrap="wrap"
+            app:justifyContent="space_between">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="离婚纠纷" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="机动车交通事故责任纠纷" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="离婚后财产纠纷" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="民间借贷纠纷" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="劳动争议" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="生命权、健康权、身体权纠纷" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="金融借款合同纠纷" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="物业服务合同纠纷" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="商品房预售合同纠纷" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="建设工程施工合同纠纷" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="分期付款买卖合同纠纷" />
+
+
+        </com.google.android.flexbox.FlexboxLayout>
+    </com.www.myapplication.radiogroup.view.RecursiveRadioGroup>
 </LinearLayout>
